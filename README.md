@@ -12,7 +12,9 @@
 `conda creat RWKVSR python=3.9.19`
 
 `conda activite RWKVSR`
+
 #安装pytorch等：
+
 `pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113`
 
 `pip install einops`
@@ -27,11 +29,12 @@
  ## Training
  **The ADAM optimizer with beta_1 = 0.9, beta _2 = 0.999 is employed to train our network. The learning rate is initialized as 11^-4 for all layers, which decreases by a half at every 35 epochs.
 You can train or test directly from the command line as such:**
+
 `python train.py --cuda --datasetName CAVE --upscale_factor 2`
 
 `python test.py --cuda --model_name checkpoint/model_2_epoch_XXX.pt`
 
-# result
+## result
 **To qualitatively measure the proposed RWKVSR, three evaluation methods are employed to verify the effectiveness of the algorithm, including Peak Signal-to-Noise Ratio (PSNR), Structural SIMilarity (SSIM), and Spectral Angle Mapper (SAM).**
 
 |Scale|CAVE|Harvard|Pavia Centre|
