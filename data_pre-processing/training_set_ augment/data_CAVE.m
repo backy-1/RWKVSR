@@ -13,13 +13,13 @@ count = 0;
 imagePatch = patchSize*1;
 scales = [1.0, 0.75, 0.5];
 %% bulid upscale folder
-savePath=['/mnt/data/LSH/py_project/SRDNet-main/dataset/trains32',data_type,'/',num2str(upscale_factor),'/'];
+savePath=['/mnt/data/LSH/py_project/main/dataset/trains32',data_type,'/',num2str(upscale_factor),'/'];
 if ~exist(savePath, 'dir')
     mkdir(savePath)
 end
 
 %% 
-srPath = "/mnt/data/LSH/py_project/SRDNet-main/dataset/trains/CAVE/complete_ms_data/";  %source data downlaoded from website 
+srPath = "/mnt/data/LSH/py_project/main/dataset/trains/CAVE/complete_ms_data/";  %source data downlaoded from website 
 srFile=fullfile(srPath);
 srdirOutput=dir(fullfile(srFile));
 srfileNames={srdirOutput.name}';
