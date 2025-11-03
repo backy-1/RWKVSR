@@ -4,14 +4,14 @@ close all
 
 dataset = 'CAVE';
 upscale = 2;
-savePath = ['/mnt/data/LSH/py_project/SRDNet-main/dataset/tests',dataset,'/',num2str(upscale)];  % save test set  to "savePath"
+savePath = ['/mnt/data/LSH/py_project/main/dataset/tests',dataset,'/',num2str(upscale)];  % save test set  to "savePath"
 
 if ~exist(savePath, 'dir')
     mkdir(savePath)
 end
 
 %% obtian all the original hyperspectral image
-srPath = '/mnt/data/LSH/py_project/SRDNet-main/dataset/trains/CAVE/complete_ms_data/'; 
+srPath = '/mnt/data/LSH/py_project/main/dataset/trains/CAVE/complete_ms_data/'; 
 srFile=fullfile(srPath);
 srdirOutput=dir(fullfile(srFile));
 srfileNames={srdirOutput.name}';
