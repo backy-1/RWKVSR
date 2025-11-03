@@ -4,7 +4,7 @@
 % scales = [2, 3, 4];   % 放大倍数
 % dataset_name = 'PaviaC';
 % src_file = '/mnt/data/LSH/py_project/deepx/Datasets/PaviaC/Pavia.mat';
-% save_root = '/mnt/data/LSH/py_project/SRDNet-main/dataset/tests/';
+% save_root = '/mnt/data/LSH/py_project/main/dataset/tests/';
 % 
 % %% Step 1: 加载数据
 % data = load(src_file);
@@ -48,7 +48,7 @@
 % 
 %     % 保存
 %     save(fullfile(test_folder, sprintf('PC_test_x%d.mat', scale)), 'hr', 'lr', '-v6');
-%     fprintf('✅ 已生成 scale ×%d 的测试数据：%s\n', scale, test_folder);
+%     fprintf(' 已生成 scale ×%d 的测试数据：%s\n', scale, test_folder);
 % end
 % 
 % fprintf('🎯 所有测试集已生成完毕！\n📂 路径：%s\n', save_root);
@@ -58,7 +58,7 @@ clc; clear; close all;
 %% 参数设置
 scales = [2, 3, 4];   % 放大倍数
 dataset_name = 'PaviaC';
-save_root = '/mnt/data/LSH/py_project/SRDNet-main/dataset/tests1/';
+save_root = '/mnt/data/LSH/py_project/main/dataset/tests1/';
 src_file = '/mnt/data/LSH/py_project/deepx/Datasets/PaviaC/Pavia.mat'; % 修改为你的文件路径
 
 %% Step 1: 加载原始数据
@@ -113,8 +113,8 @@ for s = 1:numel(scales)
         lr = single(permute(lr, [3 1 2]));
 
         save(fullfile(test_folder, sprintf('PC_patch%d_x%d.mat', p, scale)), 'hr', 'lr', '-v6');
-        fprintf('✅ 已生成 patch %d (scale×%d)\n', p, scale);
+        fprintf(' 已生成 patch %d (scale×%d)\n', p, scale);
     end
 end
 
-fprintf('🎯 所有 Pavia Center 测试补丁生成完毕！\n📂 路径：%s\n', save_root);
+fprintf(' 所有 Pavia Center 测试补丁生成完毕！\n 路径：%s\n', save_root);
