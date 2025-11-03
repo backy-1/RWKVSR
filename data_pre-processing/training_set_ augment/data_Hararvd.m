@@ -15,13 +15,13 @@ imagePatch = patchSize*upscale_factor;
 scales = [1.0, 0.75, 0.5];
 
 %% bulid upscale folder
-savePath=['/mnt/data/LSH/py_project/SRDNet-main/dataset/trains/trains',data_type,'/',num2str(upscale_factor),'/'];
+savePath=['/mnt/data/LSH/py_project/main/dataset/trains/trains',data_type,'/',num2str(upscale_factor),'/'];
 if ~exist(savePath, 'dir')
     mkdir(savePath)
 end
 
 %% 
-srPath =  '/mnt/data/LSH/py_project/SRDNet-main/dataset/trains/Hararvd/train';
+srPath =  '/mnt/data/LSH/py_project/main/dataset/trains/Hararvd/train';
 fileFolder=fullfile(srPath);
 dirOutput=dir(fullfile(fileFolder,'*.mat'));
 fileNames={dirOutput.name}';
