@@ -12,9 +12,9 @@ train_ratio = 0.8;      % 训练集比例
 
 % 数据路径
 src_file   = '/mnt/data/LSH/py_project/deepx/Datasets/PaviaC/Pavia.mat';
-save_root  = '/mnt/data/LSH/py_project/SRDNet-main/dataset/';  % ✅ RWKVSRNet 数据根目录
+save_root  = '/mnt/data/LSH/py_project/main/dataset/';  %  数据根目录
 
-dataset_name = 'PaviaC';  % ✅ 统一命名
+dataset_name = 'PaviaC';  %  统一命名
 
 %% Step 1: 加载数据
 data = load(src_file);
@@ -56,7 +56,7 @@ for s = 1:numel(scales)
     scale = scales(s);
     factor = 1 / scale;
 
-    % ✅ 保存路径改为 RWKVSRNet 结构
+    % ✅ 保存路径改结构
     train_folder = fullfile(save_root, 'trains', dataset_name, num2str(scale));
     val_folder   = fullfile(save_root, 'evals', dataset_name, num2str(scale));
 
@@ -84,5 +84,5 @@ for s = 1:numel(scales)
     end
 end
 
-fprintf('✅ PaviaC 数据集预处理完成！\n');
-fprintf('📂 数据存放在：%s\n', save_root);
+fprintf(' PaviaC 数据集预处理完成！\n');
+fprintf(' 数据存放在：%s\n', save_root);
