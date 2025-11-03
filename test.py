@@ -53,7 +53,7 @@ def weights_init(net, init_type='normal', init_gain=0.02):
 
 
 def main():
-    input_path = '/mnt/data/LSH/py_project/SRDNet-main/dataset/tests' + opt.datasetName + '/' + str(opt.upscale_factor) + '/'
+    input_path = '/mnt/data/LSH/py_project/main/dataset/tests' + opt.datasetName + '/' + str(opt.upscale_factor) + '/'
     out_path = 'result/' + opt.datasetName + '/' + str(opt.upscale_factor) + '/' + opt.method + '/'
     if not os.path.exists(out_path):
         os.makedirs(out_path)
