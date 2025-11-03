@@ -93,10 +93,10 @@ def main():
     cudnn.benchmark = True
 
     train_set = TrainsetFromFolder(
-        '/mnt/data/LSH/py_project/SRDNet-main/dataset/trains' + opt.datasetName + '/' + str(opt.upscale_factor) + '/')
+        '/mnt/data/LSH/py_project/main/dataset/trains' + opt.datasetName + '/' + str(opt.upscale_factor) + '/')
     train_loader = DataLoader(dataset=train_set, num_workers=opt.threads, batch_size=opt.batchSize, shuffle=True)
     val_set = ValsetFromFolder(
-        '/mnt/data/LSH/py_project/SRDNet-main/dataset/evals/' + opt.datasetName + '/' + str(opt.upscale_factor) + '/')
+        '/mnt/data/LSH/py_project/main/dataset/evals/' + opt.datasetName + '/' + str(opt.upscale_factor) + '/')
     val_loader = DataLoader(dataset=val_set, num_workers=opt.threads, batch_size=1, shuffle=False)
 
     model = RWKVNet(opt)
