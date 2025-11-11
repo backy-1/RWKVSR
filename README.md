@@ -43,5 +43,15 @@ You can train or test directly from the command line as such:**
 |x3|41.909/0.9778/3.020|43.929/0.9739/3.469|29.160/0.8249 /6.50|
 |x4|39.673/0.9671/3.516|42.416/0.9687/3.151|29.880/0.8173/6.60|
 
- ## Citation
-**Please consider cite this paper if you find it helpful.**
+## Citation
+If you find this work helpful, please consider citing our paper:
+
+```bibtex
+@ARTICLE{11222729,
+  author={Yang, Xiaofei and Li, Sihuan and Cao, Weijia and Tang, Dong and Ban, Yifang and Zhou, Yicong},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+  title={RWKVSR: Receptance Weighted Key-Value Network for Hyperspectral Image Super-Resolution}, 
+  year={2025},
+  doi={10.1109/TCSVT.2025.3626779}
+}
+
